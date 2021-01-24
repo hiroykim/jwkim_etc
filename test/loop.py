@@ -1,9 +1,9 @@
 from time import sleep
-    import sys
+import sys
 
 cnt = 0
 
-fp = open("/application/kms/test/loopout.txt",'a')
+fp = open("/application/kms/logs/loopout.log",'a')
 while True:
     v_str = "hello python -> " + str(cnt) +"\n"
     print(v_str)
