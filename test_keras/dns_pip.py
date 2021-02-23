@@ -11,7 +11,8 @@ def nslookup(DOMAIN):
         for result in ais:
             ip_list.append(result[-1][0])
         ip_list = list(set(ip_list))
-        return (',').join(ip_list)
+        #return (',').join(ip_list)
+        return ip_list
     except:
         return "N/A"
 
