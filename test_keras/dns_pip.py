@@ -30,8 +30,11 @@ def rd_dat():
 def check_dns(k, v):
     rst_list = nslookup(k)
     if v in rst_list:
+        #v = '{0:^15}'.format(v)
+        v = "%-15s"%v
         print(v , "==", rst_list)
     else:
+        v = '{0:<15}'.format(v)
         print(v, "<>", rst_list)
 
 def main():
@@ -39,7 +42,6 @@ def main():
     dns_dict = rd_dat()
     for k, v in dns_dict.items():
         check_dns(k, v)
-
 
 if __name__ == "__main__":
     main()
