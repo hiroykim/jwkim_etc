@@ -29,14 +29,12 @@ def rd_dat():
 def check_dns(k, v):
     rst_list = nslookup(k)
     if v in rst_list:
-        print("Good")
         print(v , "==", rst_list)
     else:
-        print("Changed")
-        print(v, "!=", rst_list)
+        print(v, "<>", rst_list)
 
 def main():
-    #init()
+    init()
     dns_dict = rd_dat()
     for k, v in dns_dict.items():
         check_dns(k, v)
