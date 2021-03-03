@@ -2,6 +2,21 @@
     .gitignore (venv/)
     git clone https://github.com/hiroykim/kms.git
 
+    python3.6 설치, pycharm 3.6 환경 잡기
+
+    pip freeze > requirements.txt
+    pip install -r requirements.txt
+
+    pip install virtualenv
+    virtualenv 가상환경명
+    source 가상환경명/bin/activate
+    가상환경명/Scripts/activate
+    deactivate
+
+    pyenv virtualenv python3 venv
+    pyenv activate venv
+    yenv deactivate
+
 1. KONLP 설치
     https://liveyourit.tistory.com/56
     - 자바1.8 이미 설치됨.
@@ -9,5 +24,16 @@
     - pip install konlpy
     - mecab은 추가설치 필요함.
     (win : https://hong-yp-ml-records.tistory.com/91)
-    pip install mecab_python-0.996_ko_0.9.2_msvc-cp37-cp37m-win_amd64.whl
+    pip install mecab_python-0.996_ko_0.9.2_msvc-cp36-cp36m-win_amd64.whl
+        import site
+        site.getsitepackages()
+    (linux : https://provia.tistory.com/57)
+    wget https://bitbucket.org/eunjeon/mecab-ko-dic/downloads/mecab-ko-dic-2.1.1-20180720.tar.gz
+    wget https://bitbucket.org/eunjeon/mecab-ko/downloads/mecab-0.996-ko-0.9.2.tar.gz
 
+
+2. KSS문장분리기
+    pip install kss
+
+3. Flask
+    pip install Flask
